@@ -12,27 +12,27 @@
 
 ###### 152120171075 Hager Hamza
 
-## Instructions for installing the headless CMS in order to use the database.
+### Instructions for installing the headless CMS in order to use the database.
 
-### Prequisites:
+#### Prequisites:
 
 - nodeJS
 - StrapiJS
 - yarn or npm
 - gitbash
 
-## Step 1 - Download and install prerequisites
+### Step 1 - Download and install prerequisites
 
 [Download](https://git-scm.com/downloads) and install git.
 
 [Download](https://nodejs.org/en/download/) and install nodeJS.
 
-### Steps for installing Strapi.js
+#### Steps for installing Strapi.js
 
 1. open the gitbash terminal
 2. type the command 'npm i strapi -g' (if you are using yarn, type 'yarn add strapi')
 
-## Step 2 - Running Strapi and the databse.
+### Step 2 - Running Strapi and the databse.
 
 1. Navigate into the 'schooldb' folder in this repo
 2. If it is the first time running the app on your system, type the command 'npm install'. If it is no the first time, skip to step 3.
