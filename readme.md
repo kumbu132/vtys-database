@@ -1,11 +1,16 @@
 # VTYS Project Fall Semester 2021
 
-Group 7
-152120171097 Kumbukani Kamanga
-15212071006 Yavuz Uçarkuş
-152120161058 Başak Akalın
-152120171044 Ayşegül Kadem
-152120171075 Hager Hamza
+### Group 7
+
+#### 152120171097 Kumbukani Kamanga
+
+#### 15212071006 Yavuz Uçarkuş
+
+#### 152120161058 Başak Akalın
+
+#### 152120171044 Ayşegül Kadem
+
+#### 152120171075 Hager Hamza
 
 ## Instructions for installing the headless CMS in order to use the database.
 
