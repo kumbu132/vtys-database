@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * club service.
+ * usertype service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::club.club');
+module.exports = createCoreService('api::usertype.usertype');

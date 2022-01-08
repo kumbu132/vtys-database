@@ -23,11 +23,11 @@
     "password": {
       "type": "string"
     },
-    "clubs": {
+    "parent": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::club.club",
-      "mappedBy": "students"
+      "relation": "manyToOne",
+      "target": "api::parent.parent",
+      "inversedBy": "students"
     }
   }
 }

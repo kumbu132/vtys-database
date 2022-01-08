@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usertypes",
+  "info": {
+    "singularName": "usertype",
+    "pluralName": "usertypes",
+    "displayName": "usertype",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Admin",
+        "Teacher",
+        "Student"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}

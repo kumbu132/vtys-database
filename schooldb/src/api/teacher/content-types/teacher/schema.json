@@ -29,6 +29,11 @@
       "relation": "oneToOne",
       "target": "api::lesson.lesson",
       "inversedBy": "teacher"
+    },
+    "usertype": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::usertype.usertype"
     }
   }
 }

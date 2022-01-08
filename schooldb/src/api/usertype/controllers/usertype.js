@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  club controller
+ *  usertype controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::club.club');
+module.exports = createCoreController('api::usertype.usertype');

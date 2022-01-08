@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * club router.
+ * usertype router.
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::club.club');
+module.exports = createCoreRouter('api::usertype.usertype');
