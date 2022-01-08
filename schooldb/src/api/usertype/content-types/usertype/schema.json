@@ -19,9 +19,6 @@
         "Teacher",
         "Student"
       ]
-    },
-    "Name": {
-      "type": "string"
     }
   }
 }
