@@ -36,6 +36,12 @@
       "relation": "oneToMany",
       "target": "api::quiz.quiz",
       "mappedBy": "lesson"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "lessons"
     }
   }
 }
