@@ -12,17 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "quizID": {
-      "type": "uid"
-    },
     "lesson": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::lesson.lesson",
       "inversedBy": "quizzes"
-    },
-    "score": {
-      "type": "float"
     },
     "coefficient": {
       "type": "integer"
@@ -31,6 +25,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::module.module"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

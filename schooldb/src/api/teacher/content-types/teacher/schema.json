@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "teacherID": {
-      "type": "uid"
-    },
     "name": {
       "type": "string"
     },

@@ -12,15 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "moduleID": {
-      "type": "uid",
-      "required": true
-    },
     "name": {
       "type": "string"
     },
-    "score": {
-      "type": "float"
+    "coefficient": {
+      "type": "integer"
     }
   }
 }
