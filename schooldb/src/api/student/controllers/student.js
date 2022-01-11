@@ -10,7 +10,7 @@ const validateLogin = async (userDetails, strapi, ctx) => {
     const knex = require("knex")(strapi.db.config.connection);
     const result = await knex
       .select("id", "name", "surname", "password")
-      .from("students")
+      .from(`${userDetails.userType}s`)
       .where("id", "=", String(userDetails.id));
 
     console.log({ sqlResult: result });
