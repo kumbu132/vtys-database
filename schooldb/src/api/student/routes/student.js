@@ -6,12 +6,4 @@
 
 const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = {
-  routes: [
-    {
-      method: "GET",
-      path: "/hello",
-      handler: "student.exampleAction",
-    },
-  ],
-};
+module.exports = createCoreRouter("api::student.student");
