@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "studentID": {
-      "type": "uid"
-    },
     "name": {
       "type": "string"
     },
@@ -30,10 +27,19 @@
       "target": "api::parent.parent",
       "inversedBy": "students"
     },
+    "GPA": {
+      "type": "decimal"
+    },
     "lessons": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::lesson.lesson",
+      "inversedBy": "students"
+    },
+    "examScore": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exam-score.exam-score",
       "mappedBy": "student"
     }
   }

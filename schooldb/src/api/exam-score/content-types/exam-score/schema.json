@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exam_scores",
+  "info": {
+    "singularName": "exam-score",
+    "pluralName": "exam-scores",
+    "displayName": "examScore",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "examScore"
+    },
+    "quiz": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::quiz.quiz"
+    },
+    "score": {
+      "type": "float"
+    }
+  }
+}
