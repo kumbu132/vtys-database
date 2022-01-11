@@ -5,7 +5,7 @@
 
 const { createCoreController } = require("@strapi/strapi").factories;
 
-const validateLogin = async (userDetails, strapi, ctx) => {
+const validateLogin = async (userDetails, strapi) => {
   try {
     const knex = require("knex")(strapi.db.config.connection);
     const result = await knex
@@ -14,18 +14,21 @@ const validateLogin = async (userDetails, strapi, ctx) => {
       .where("id", "=", String(userDetails.id));
 
     console.log({ sqlResult: result });
-
-    if (!result.length) {
-      return 401;
-    } else {
+    let resCode;
+    if (result.length) {
       result.forEach((user) => {
+        console.log({ userFromResultsDeets: userDetails });
         if (user.password === userDetails.password) {
-          return 202;
+          resCode = 202;
+        } else {
+          resCode = 401;
         }
       });
+    } else {
+      resCode = 401;
     }
 
-    return 401;
+    return resCode;
   } catch (err) {
     console.log(err);
   }
@@ -35,20 +38,9 @@ module.exports = createCoreController("api::student.student", ({ strapi }) => ({
   // Method 1: Creating an entirely custom action
   async index(ctx) {
     try {
-      //   console.log({ query: strapi.query('student').count({ name_contains: 'cem' }));
       let tmp = ctx.request.body;
-      //   console.log({ strapii: strapi.db.config });
-      let resCode = await validateLogin(tmp, strapi, ctx);
-      //   let abs = JSON.parse(ctx.request.body);
-      //console.log({ a: resCode });
-      if (resCode == 202) {
-        //Accepted
-        ctx.response.status = 202;
-      } else if (resCode == 401) {
-        //Unauthorised
-        ctx.response.status = 401;
-      }
-
+      let resCode = await validateLogin(JSON.parse(tmp), strapi);
+      ctx.response.status = resCode;
       console.log({ res: resCode });
     } catch (err) {
       ctx.body = err;
