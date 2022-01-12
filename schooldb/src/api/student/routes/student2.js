@@ -11,5 +11,10 @@ module.exports = {
       path: "/login",
       handler: "student.index",
     },
+    {
+      method: "POST",
+      path: "/teachersStudents",
+      handler: "student.teachers",
+    },
   ],
 };
